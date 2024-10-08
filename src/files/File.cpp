@@ -18,7 +18,7 @@ std::vector<std::string> File::readLines() const {
   return lines;
 }
 
-void File::write(std::vector<std::string> lines) const {
+void File::write(const std::vector<std::string> &lines) const {
   std::ofstream file(this->path, std::ios::out | std::ios::trunc);
 
   for (const auto &line : lines)
