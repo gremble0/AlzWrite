@@ -1,11 +1,20 @@
 #include <QApplication>
 #include <QMainWindow>
+#include <QVBoxLayout>
+
+#include "widgets/TextBuffer.hpp"
 
 int main(int argc, char *argv[]) {
   QApplication app(argc, argv);
-
   QMainWindow window;
-  window.setWindowTitle("AlzWrite - lose yourself in text editing");
+  TextBuffer buffer(&window);
+  QWidget centralWidget(&window);
+
+  QVBoxLayout layout(&centralWidget);
+  layout.addWidget(&buffer);
+
+  window.setCentralWidget(&centralWidget);
+  window.setWindowTitle("AlzWrite");
   window.resize(640, 480);
   window.show();
 
