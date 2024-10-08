@@ -5,7 +5,7 @@
 
 #include "File.hpp"
 
-std::vector<std::string> File::readLines() {
+std::vector<std::string> File::readLines() const {
   std::vector<std::string> lines;
   std::ifstream file(this->path);
 
