@@ -7,10 +7,7 @@ class TextBuffer : public QWidget {
   Q_OBJECT;
 
 public:
-  TextBuffer(const std::string &path, QWidget *parent = nullptr) : QWidget(parent), file(path) {
-    this->setFocusPolicy(Qt::StrongFocus);
-    this->setFont(QFont("Courier", 12));
-  }
+  TextBuffer(const std::string &path, QWidget *parent = nullptr);
 
   void paintEvent(QPaintEvent *event) override;
 
