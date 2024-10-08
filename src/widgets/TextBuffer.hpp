@@ -1,7 +1,7 @@
 #include <QWidget>
 #include <string>
-// TODO: fix import paths from root
-#include "../files/File.hpp"
+
+#include "files/File.hpp"
 
 class TextBuffer : public QWidget {
   Q_OBJECT;
