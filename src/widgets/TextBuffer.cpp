@@ -6,6 +6,12 @@
 
 #include "TextBuffer.hpp"
 
+void TextBuffer::initializeLayout() {
+  this->layout.setContentsMargins(0, 0, 0, 0);
+  this->layout.addWidget(&this->textEdit);
+  this->setLayout(&layout);
+}
+
 void TextBuffer::loadText() {
   QPainter painter(this);
   painter.fillRect(this->rect(), Qt::black);

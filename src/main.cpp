@@ -26,6 +26,7 @@ int main(int argc, char *argv[]) {
 
   window.setCentralWidget(&centralWidget);
   window.setWindowTitle("AlzWrite");
+  window.resize(640, 480);
   window.show();
 
   return app.exec();
