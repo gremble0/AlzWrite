@@ -1,5 +1,8 @@
+#include <QFile>
+#include <QTextEdit>
 #include <QWidget>
-#include <string>
+#include <qevent.h>
+#include <qobject.h>
 
 #include "files/File.hpp"
 
@@ -7,11 +10,12 @@ class TextBuffer : public QWidget {
   Q_OBJECT;
 
 public:
-  TextBuffer(const std::string &path, QWidget *parent = nullptr);
+  TextBuffer(const QString &path, QWidget *parent = nullptr)
+      : QWidget(parent), file(path), textEdit(this) {}
 
   void paintEvent(QPaintEvent *event) override;
 
 private:
-  File file;
-  int cursorPosition;
+  QFile file;
+  QTextEdit textEdit;
 };
