@@ -2,14 +2,11 @@
 #include <QPainter>
 #include <QString>
 #include <QVector>
-#include <QWidget>
 #include <iostream>
-#include <qcoreevent.h>
-#include <qobject.h>
 
 #include "TextBuffer.hpp"
 
-void TextBuffer::paintEvent(QPaintEvent *event) {
+void TextBuffer::loadText() {
   QPainter painter(this);
   painter.fillRect(this->rect(), Qt::black);
   painter.setPen(Qt::white);

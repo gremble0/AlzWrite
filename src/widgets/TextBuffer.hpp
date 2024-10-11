@@ -11,11 +11,13 @@ class TextBuffer : public QWidget {
 
 public:
   TextBuffer(const QString &path, QWidget *parent = nullptr)
-      : QWidget(parent), file(path), textEdit(this) {}
-
-  void paintEvent(QPaintEvent *event) override;
+      : QWidget(parent), file(path), textEdit(this) {
+    this->loadText();
+  }
 
 private:
   QFile file;
   QTextEdit textEdit;
+
+  void loadText();
 };
