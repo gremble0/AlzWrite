@@ -14,12 +14,10 @@ find_package(Qt6 COMPONENTS Widgets REQUIRED)
 set(SOURCES
     src/main.cpp
     src/widgets/TextBuffer.cpp
-    src/files/File.cpp
 )
 
 set(HEADERS
     src/widgets/TextBuffer.hpp
-    src/files/File.hpp
 )
 
 add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS})
